@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title id="siteTitle"></title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand" id="brandBtn"></div>
+    <nav class="navlinks" id="topNav"></nav>
+    <input id="search" class="search" placeholder="">
+    <div class="progress"><i id="progress"></i></div>
+  </div>
+</header>
+
+<main class="container">
+  <!-- 总览视图 -->
+  <section class="view active" id="view-overview"></section>
+
+  <!-- 观察轴工作台视图 -->
+  <section class="view" id="view-workbench">
+    <div class="workbench">
+      <div class="wb-header">
+        <div>
+          <div class="eyebrow" id="wbAxisLabel"></div>
+          <h2 id="wbTitle"></h2>
+        </div>
+        <div class="hint" id="wbHint"></div>
+      </div>
+
+      <div class="wb-grid">
+        <aside class="wb-left" id="wbLeft">
+          <div class="axis-switch" id="axisSwitch"></div>
+          <div class="section-label" id="lblStage"></div>
+          <div class="stage-list" id="stageList"></div>
+          <div class="section-label" id="lblEra"></div>
+          <div class="filter-group" id="eraFilters"></div>
+          <div class="section-label" id="lblType"></div>
+          <div class="filter-group" id="typeFilters"></div>
+        </aside>
+
+        <div class="wb-center">
+          <div class="wb-tip" id="wbTip"></div>
+          <div class="center-toolbar">
+            <span class="count" id="eventCount"></span>
+            <button class="reset" id="resetFilters"></button>
+          </div>
+          <div class="event-list" id="eventList"></div>
+          <div class="noresult" id="noresult" style="display:none"></div>
+        </div>
+
+        <aside class="wb-right" id="wbRight">
+          <div class="right-empty" id="rightEmpty">
+            <h3 id="guideTitle"></h3>
+            <p id="guideText"></p>
+            <div class="section-label" id="lblKeyNodes"></div>
+            <div class="key-nodes" id="keyNodes"></div>
+          </div>
+          <div class="right-detail" id="rightDetail" style="display:none"></div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 1989 深度文件视图 -->
+  <section class="view" id="view-deep1989"></section>
+
+  <!-- 2018 深度文件视图 -->
+  <section class="view" id="view-deep2018"></section>
+
+  <!-- 工具箱视图 -->
+  <section class="view" id="view-toolbox"></section>
+
+  <footer class="footer" id="siteFooter"></footer>
+</main>
+
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="dialogTitle" tabindex="-1">
+    <div class="dialog-head">
+      <div><div id="dialogKicker" class="dialog-kicker"></div><h3 id="dialogTitle"></h3></div>
+      <button class="close" id="closeBtn"></button>
+    </div>
+    <div class="dialog-body" id="dialogBody"></div>
+  </div>
+</div>
+
+<div class="term-overlay" id="termOverlay" role="dialog" aria-modal="true" aria-label="名词解释">
+  <div class="term-panel" id="termPanel" tabindex="-1">
+    <div class="tp-head">
+      <h4 class="tp-title" id="termPanelTitle"></h4>
+      <button type="button" class="tp-close" id="termPanelClose"></button>
+    </div>
+    <div class="tp-body" id="termPanelBody"></div>
+    <div class="tp-hint" id="termPanelHint"></div>
+  </div>
+</div>
+
+<script src="js/history-data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
